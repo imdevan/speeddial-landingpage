@@ -24,7 +24,7 @@ assets:
   digest: true
   cache: false
   sources:
-    - "_assets/css"
+    - "assets/css"
     - "images"
 
 # Read and Output Collections

@@ -31,7 +31,7 @@ var processors = [
 
 // Compile SCSS into CSS & auto-inject into browsers
 gulp.task('styles', function() {
-  return gulp.src('./_assets/styles/style.scss')
+  return gulp.src('./assets/styles/style.scss')
   .pipe(sass())
   .pipe(nano({discardComments: {removeAll: true}}))
   .pipe(gulp.dest('./_site/assets/css'))
@@ -40,13 +40,13 @@ gulp.task('styles', function() {
 
 // Compile SCSS into CSS & auto-inject into browsers
 gulp.task('scripts', function() {
-  return gulp.src('./_assets/js/index.js')
+  return gulp.src('./assets/js/index.js')
   .pipe(gulp.dest('./_site/assets/js'))
   .pipe(browserSync.stream());
 });
 
 gulp.task('images', function() {
-  return gulp.src('./_assets/images/**/*')
+  return gulp.src('./assets/images/**/*')
   .pipe(gulp.dest('./_site/assets/images'));
 });
 
@@ -60,10 +60,10 @@ gulp.task('serve', ['local-build', 'styles', 'scripts', 'images'], function() {
         server: { baseDir: '_site/' }
     });
 
-    gulp.watch('_assets/styles/**/*.scss', ['styles']);
+    gulp.watch('assets/styles/**/*.scss', ['styles']);
     gulp.watch(['**/*.svg'].concat(ignore), ['local-build']);
     gulp.watch(['**/*.md'].concat(ignore), ['local-build']);
-    gulp.watch(['_assets/js/**/*.js'].concat(ignore), ['scripts']);
+    gulp.watch(['assets/js/**/*.js'].concat(ignore), ['scripts']);
     gulp.watch(['**/*.html'].concat(ignore), ['local-build']);
     gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
