@@ -1,0 +1,44 @@
+$demo-timing-in: opacity 3s cubic-bezier(0,1.22,1,1), transform 3s cubic-bezier(0,1.22,1,1);
+$demo-timing-out: opacity .3s ease-out, transform .3s ease-out;
+
+
+@keyframes demo-animate-in {
+  0% {
+    // transform: translateY(25px);
+    opacity: 0;
+
+  }
+  100% {
+    // transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.o-demo {
+    position: relative;
+
+    &__app {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 99;
+    }
+
+    &__window {
+        opacity: 0;
+
+        &.open {
+            animation: demo-animate-in .5s cubic-bezier(0,1.22,1,1);
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &__label {
+        opacity: 0;
+
+        &.show {
+            animation: demo-animate-in .5s cubic-bezier(0,1.22,1,1);
+            animation-fill-mode: forwards;
+        }
+    }
+}

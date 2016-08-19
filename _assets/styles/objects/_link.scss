@@ -1,0 +1,11 @@
+$link-color: $blue;
+$link-hover-color: $red;
+
+.link {
+    color: $link-color;
+    transition: color .15s ease-in;
+
+    &:hover {
+        color: $link-hover-color;
+    }
+}

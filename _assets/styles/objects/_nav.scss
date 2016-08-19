@@ -1,0 +1,45 @@
+// Global namespace for nav object
+$nav-namespace: "o-nav" !default;
+
+.#{$nav-namespace} {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__mark {
+		font-family: "Space Mono", monospace;
+		font-size: 1.25rem;
+		font-weight: 400;
+		font-feature-settings: "liga" 0;
+		color: $white;
+		text-decoration: none;
+	}
+
+	&__list {
+		margin: 0;
+
+		&-item {
+			display: inline-block;
+			list-style-type: none;
+			padding-left: 2rem;
+		}
+	}
+
+	&__link {
+		color: $white;
+		text-decoration: none;
+		padding-bottom: 1.125rem;
+
+		&.active {
+			border-bottom: 4px solid $white;
+		}
+
+		&:hover {
+			border-bottom: 4px solid $white-transparent;
+
+			&.active {
+				border-color: $white;
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+// Global namespace for header object
+$header-namespace: "o-header" !default;
+
+// Global width for header
+$header-width: 100% !default;
+@import 'https://fonts.googleapis.com/css?family=Dancing+Script|Montez|Open+Sans|Pacifico|Yellowtail';
+
+.title {
+    font-family: Dancing Script;
+    font-size: 6em;
+}
+
+.#{$header-namespace} {
+    font-family: Pacifico;
+    background-color: $gray-dark;
+
+	width: $header-width;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}

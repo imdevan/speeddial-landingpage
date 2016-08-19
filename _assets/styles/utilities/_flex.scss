@@ -1,0 +1,41 @@
+$flex-sizes: (
+	'xxs': .5,
+	'xs': 1,
+	'sm': 2,
+	'md': 3,
+	'lg': 4,
+	'xl': 6,
+	'xxl': 10,
+);
+
+.flex {
+    display: flex;
+
+    &--center {
+        justify-content: center;
+        align-items: center;
+    }
+
+    &--column {
+        flex-direction: column;
+    }
+
+    @each $size, $scale in $flex-sizes {
+        &__block-#{$size}  {
+            width: 100%;
+    		flex: $scale;
+        }
+
+        &-#{$size}-column  {
+            @include screen($size) {
+                flex-direction: column;
+            }
+        }
+
+        &-#{$size}-row  {
+            @include screen($size) {
+                flex-direction: row;
+            }
+        }
+    }
+}

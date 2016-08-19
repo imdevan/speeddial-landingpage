@@ -1,0 +1,20 @@
+$btn-namespace: "o-btn" !default;
+$btn-padding: 0.5rem 2rem;
+$btn-shadow: 12px 12px 0px rgba(black,1);
+$btn-color: white;
+$btn-background: $blue;
+$btn-hover-background: $red;
+
+.#{$btn-namespace} {
+    &--primary {
+        color: $btn-color;
+        text-decoration: none;
+        background: $btn-background;
+        padding: $btn-padding;
+        transition: background .15s ease-in;
+
+        &:hover {
+            background: $btn-hover-background;
+        }
+    }
+}
