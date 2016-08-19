@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://speeddial.xyz/terminalogy/</loc>
+<loc>https://speeddial.xyz/</loc>
 </url>
 <url>
-<loc>https://speeddial.xyz/terminalogy/status/</loc>
+<loc>https://speeddial.xyz/status/</loc>
 </url>
 <url>
-<loc>https://speeddial.xyz/terminalogy/about/</loc>
+<loc>https://speeddial.xyz/about/</loc>
 </url>
 </urlset>
